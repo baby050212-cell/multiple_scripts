@@ -1,0 +1,187 @@
+# =========================
+# 基础环境
+# =========================
+[env]
+TERM = "xterm-256color"
+
+# =========================
+# 窗口设置
+# =========================
+[window]
+dimensions = { columns = 120, lines = 32 }
+padding = { x = 2, y = 2 }
+# decorations = "Buttonless"   # macOS 推荐
+decorations = "full"      # macOS 推荐
+opacity = 0.95
+blur = true               # macOS 支持背景模糊
+startup_mode = "Windowed"
+
+# =========================
+# 滚动
+# =========================
+[scrolling]
+history = 10000
+multiplier = 3
+
+# =========================
+# 字体
+# =========================
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+size = 14.5
+
+offset = { x = 0, y = 2 }
+glyph_offset = { x = 0, y = 1 }
+
+# =========================
+# 光标
+# =========================
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 500
+
+
+# =========================
+# 颜色主题
+# =========================
+# Enhanced GitHub Dark / High Contrast Soft
+# 目标：更亮文字、更强对比、更适合 Claude Code / opencode / CLI 长时间使用
+
+[colors.primary]
+background = "#0B1020"
+foreground = "#E6EDF3"
+
+[colors.cursor]
+text = "#0B1020"
+cursor = "#F0F6FC"
+
+[colors.vi_mode_cursor]
+text = "#0B1020"
+cursor = "#7DD3FC"
+
+[colors.selection]
+text = "#FFFFFF"
+background = "#2F5F8F"
+
+# ======================
+# Normal colors
+# ======================
+[colors.normal]
+black = "#1C2333"
+red = "#FF6B6B"
+green = "#7EE787"
+yellow = "#F2CC60"
+blue = "#60A5FA"
+magenta = "#C084FC"
+cyan = "#67E8F9"
+white = "#D6DEEB"
+
+# ======================
+# Bright colors
+# ======================
+[colors.bright]
+black = "#8B9AB4"
+red = "#FF8585"
+green = "#9BE9A8"
+yellow = "#FFD866"
+blue = "#93C5FD"
+magenta = "#D8B4FE"
+cyan = "#A5F3FC"
+white = "#FFFFFF"
+
+# ======================
+# Dim colors
+# ======================
+[colors.dim]
+black = "#0B1020"
+red = "#B94A48"
+green = "#4B9E61"
+yellow = "#B58B2A"
+blue = "#3B82F6"
+magenta = "#8B5CF6"
+cyan = "#2DD4BF"
+white = "#94A3B8"
+
+# ======================
+# Search / hints
+# ======================
+[colors.search.matches]
+foreground = "#0B1020"
+background = "#FFD866"
+
+[colors.search.focused_match]
+foreground = "#0B1020"
+background = "#7EE787"
+
+[colors.hints.start]
+foreground = "#0B1020"
+background = "#F2CC60"
+
+[colors.hints.end]
+foreground = "#E6EDF3"
+background = "#334155"
+
+# ======================
+# Line indicator
+# ======================
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+# =========================
+# 选择（复制）
+# =========================
+[selection]
+save_to_clipboard = true
+
+# =========================
+# 鼠标
+# =========================
+[mouse]
+hide_when_typing = true
+bindings = [{ mouse = "Right", action = "Paste" }]
+
+# =========================
+# 性能优化（很重要）
+# =========================
+[terminal]
+osc52 = "CopyPaste"
+
+[general]
+live_config_reload = true
+
+# =========================
+# 快捷键（示例）
+# =========================
+[[keyboard.bindings]]
+key = "V"
+mods = "Command"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Command"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Q"
+mods = "Command"
+action = "Quit"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "SpawnNewInstance"
+
+# 清屏
+[[keyboard.bindings]]
+key = "K"
+mods = "Command"
+action = "ClearHistory"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b[13;2u"

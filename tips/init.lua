@@ -50,6 +50,10 @@ vim.opt.timeoutlen = 500
 -- =========================
 -- 外观
 -- =========================
+-- default、habamax、industry、koehler、lunaperche、morning、murphy、pablo、
+-- peachpuff、quiet、retrobox、shine、slate、sorbet、torte、wildcharm、zaibatsu、zellner
+vim.opt.background = "dark"
+vim.cmd.colorscheme("murphy")
 vim.opt.pumheight = 10                -- 补全菜单高度
 vim.opt.laststatus = 3                -- 全局状态栏
 vim.opt.showmode = false              -- 不显示 -- INSERT --，状态栏插件会处理
